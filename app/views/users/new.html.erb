@@ -3,18 +3,28 @@
 <%= form_with(model: @user, local: true) do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
 <ul style="list-style:none;">
-    <li><%= f.label :name, '名前' %>
-    <%= f.text_field :name %></li>
+    <li>
+        <%= f.label :name, '名前' %>
+        <%= f.text_field :name %>
+    </li>
     
-    <li><%= f.label :email, 'メールアドレス' %>
-    <%= f.email_field :email %></li>
+    <li>
+        <%= f.label :email, 'メールアドレス' %>
+        <%= f.email_field :email %>
+    </li>
     
-    <li><%= f.label :password, 'パスワード' %>
-    <%= f.password_field :password %></li>
+    <li>
+        <%= f.label :password, 'パスワード' %>
+        <%= f.password_field :password %>
+    </li>
     
-    <li><%= f.label :password_confirmation, 'パスワードの確認' %>
-    <%= f.password_field :password_confirmation %></li>
+    <li>
+        <%= f.label :password_confirmation, 'パスワードの確認' %>
+        <%= f.password_field :password_confirmation %>
+    </li>
     
     <li><%= f.submit 'アカウント登録' %></li>
 </ul>
 <% end %>
+
+<p>アカウントをお持ちの方⇒<%= link_to 'ログイン', login_path %></p>
